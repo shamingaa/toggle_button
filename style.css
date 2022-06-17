@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d7dcdd;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* height: 100vh;
+  margin: 0; */
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background: #292c35;
+}
+
+.btn{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-55px);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.protector {
+  display: relative;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.label {
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  height: 46px;
+  width: 129px;
+  transform: scale(1.5);
+  overflow: scroll;
+}
+
+.label::before,
+.label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.label::-webkit-scrollbar {
+  display: none;
+}
+
+.ripple {
+  height: 176%;
+  width: 61%;
+  margin-left: -25px;
+  box-shadow: inset 0px 0px 20px 0px #ffffff4f;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.firstlCloud {
+  height: 100%;
+  width: 100%;
+  /* background-color: #ffffff69; */
+  position: absolute;
+  top: 43%;
+  border-top-left-radius: 116% 107%;
+  z-index: 1;
+  transform: skewY(350deg);
+}
+
+.firstlCloud::before,
+.firstlCloud::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* .secondCloud::before{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff91;
+    position: absolute;
+    top: 38%;
+    border-top-left-radius: 116% 107%;
+    z-index: 1;
+    transform: skewY(354deg);
+} */
+
+.upRoundOne {
+  height: 88%;
+  width: 36%;
+  top: -16%;
+  left: 85%;
+  background-color: #ffffff82;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.upRoundTwo {
+  height: 33%;
+  width: 12%;
+  top: 32%;
+  left: 75%;
+  background-color: #ffffff82;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.upRoundThree {
+  height: 58%;
+  width: 23%;
+  top: 44%;
+  left: 56%;
+  background-color: #ffffff82;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.upRoundFour {
+  height: 33%;
+  width: 12%;
+  top: 69%;
+  left: 46%;
+  background-color: #ffffff82;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+/* .upRoundFive{} */
+
+.roundOne {
+  height: 88%;
+  width: 36%;
+  top: 24%;
+  left: 85%;
+  background-color: #ffffffed;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.roundTwo {
+  height: 56%;
+  width: 24%;
+  top: 50%;
+  left: 66%;
+  background-color: #ffffffed;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.roundThree {
+  height: 56%;
+  width: 23%;
+  top: 78%;
+  left: 47%;
+  background-color: #ffffffbf;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.ripple::before,
+.ripple::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.rippleSecondary::before {
+  box-shadow: inset -1px 0px 17px 0px #ffffff38;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  left: 20px;
+  right: -17px;
+}
+
+.rippleSecondary::after {
+  box-shadow: inset -1px 0px 17px 0px #ffffff38;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  left: 20px;
+  right: -30px;
+}
+
+.whiteShadow::before {
+  margin-top: 2px;
+  bottom: 2px;
+  background-image: linear-gradient(
+    52deg,
+    rgb(175 195 255),
+    rgb(175 195 255),
+    rgb(1 86 241 / 82%)
+  );
+  box-shadow: 4px 4px 9px inset;
+  border-radius: 50px;
+}
+
+.whiteShadow::after {
+  top: -2px;
+  bottom: 2px;
+  background-color: #b4b6b9;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.label .ball {
+  background-color: #ffff87;
+  border-radius: 50%;
+  position: absolute;
+  height: 37px;
+  width: 37px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+  position: relative;
+  box-shadow: 3px 3px 11px #787575;
+}
+
+.label .ball::before,
+.ball::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overBall::before {
+  top: 3px !important;
+  background-color: #ce9909;
+  border-radius: 50%;
+}
+
+.overBall::after {
+  top: 2px;
+  background-color: #ffd21f;
+  bottom: 2px;
+  right: 1px;
+  left: 1px;
+  border-radius: 50%;
+}
+
+.moon {
+  background-color: #837f7f !important;
+  box-shadow: 1px 4px 8px !important;
+}
+
+.moon::before,
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.moonShadow::after {
+  margin-top: 2px;
+  height: 91%;
+  width: 98%;
+  border-radius: 100%;
+  background-color: #ddd;
+}
+
+.moonShadow::before {
+  height: 91%;
+  width: 98%;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.moonHoles {
+  top: 16px;
+  left: 8px;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(189 190 201);
+  box-shadow: inset 0px 1px 1px #706e6e;
+  position: absolute;
+  transition: transform 0.2s linear;
+  z-index: 1;
+  opacity: 0;
+}
+
+.showMoonHole {
+  opacity: 1;
+}
+
+.showMoonHole::before,
+.showMoonHole::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.otherHoles::before {
+  width: 51%;
+  height: 56%;
+  left: 20%;
+  border-radius: 100%;
+  margin-left: 14px;
+  margin-top: -6px;
+  background-color: rgb(189 190 201);
+  box-shadow: inset 0px 1px 1px #706e6e;
+  z-index: 1;
+}
+
+.otherHoles::after {
+  width: 75%;
+  height: 74%;
+  left: 20%;
+  border-radius: 100%;
+  margin-left: 14px;
+  margin-top: 9px;
+  background-color: rgb(189 190 201);
+  box-shadow: inset 0px 1px 1px #706e6e;
+  z-index: 1;
+}
+
+.commot {
+  display: none;
+}
+
+.day {
+  margin-top: -81px;
+}
+
+.night {
+  background-image: linear-gradient(79deg, rgb(3 7 10), rgb(96 102 124 / 82%));
+  box-shadow: inset -5px 7px 9px;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(82px);
+}
+
+.checkbox:checked + .label .moonHoles {
+  transform: translateX(82px);
+}
