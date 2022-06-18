@@ -5,6 +5,7 @@ let ball = document.querySelector(".ball")
 let moonHoles = document.querySelector(".moonHoles")
 let day = document.querySelector(".day")
 let whiteShadow = document.querySelector(".whiteShadow")
+let stars = document.querySelector(".stars")
 
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark');
@@ -16,4 +17,6 @@ chk.addEventListener('change', () => {
     day.classList.toggle("commot")
     whiteShadow.classList.toggle("whiteShadow")
     whiteShadow.classList.toggle("night")
+
+    stars.classList.toggle("showStars")
 });
